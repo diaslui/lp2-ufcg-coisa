@@ -1,0 +1,62 @@
+Coisa
+association Descanso, RegistroTempoOnline, Disciplina,RegistroResumos
+---
+---
++ main(args:String[]):void
+---
+
+Descanso
+---
+    - horasDescanso: int
+    - numeroSemanas: int
+---
+
+    + Descanso(horasDescanso:int, horasDescanso:int)
+    + defineHorasDescanso(valor: int): void
+    + defineNumeroSemanas(valor: int): void
+    + getStatusGeral(): string
+
+---
+
+RegistroTempoOnline
+---
+
+    - nomeDisciplina: string
+    - tempoOnline: int
+    - tempoEsperado: int
+
+---
+    + adicionaTempoOnline(tempo: int): void
+    + atingiuMetaTempoOnline(): void
+    + toString(): string
+---
+
+Disciplina
+---
+
+    - nome: string
+    - horasEstudo: int
+    - notas: double[]
+
+---
+
++ cadastraHoras(horas: int): void
+    + cadastraNota(nota: int, valorNota: double): void
++ aprovado(): bool
+    + toString(): string
+---
+
+RegistroResumos
+---
+    - tema: string
+    - conteudo: string
+
+---
+
+    + RegistroResumos(numeroDeResumos: int)
+    + adicionaResumo(tema: string, conteudo: string): void
+    + pegaResumos(): string[]
+    + imprimeResumos(): string
+    + contaResumos(): int
+    + temResumo(tema: string): bool
+---
