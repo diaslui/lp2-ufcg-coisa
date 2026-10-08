@@ -4,6 +4,8 @@ package lab2;
  * Representa a rotina semanal de descanso do aluno.
  * O aluno e considerado descansado quando possui pelo menos 26 horas de
  * descanso por semana.
+ * 
+ *  @author Pedro Luis da Silva Rocha Dias
  */
 public class Descanso {
 

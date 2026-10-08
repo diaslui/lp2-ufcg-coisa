@@ -2,6 +2,8 @@ package lab2;
 
 /**
  * Registra o tempo investido pelo aluno em uma disciplina.
+ * 
+ * @author Pedro Luis da Silva Rocha Dias
  */
 public class RegistroTempoOnline {
 

@@ -4,6 +4,8 @@ package lab2;
  * Mantem um conjunto limitado de resumos de estudo.
  * Quando o limite e atingido, novos resumos substituem os mais antigos em
  * ordem circular.
+ * 
+ * @author Pedro Luis da Silva Rocha Dias
  */
 public class RegistroResumos {
 

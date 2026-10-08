@@ -2,6 +2,8 @@ package lab2;
 
 /**
  * Representa um resumo de estudo com tema e conteudo.
+ * 
+ * @author Pedro Luis da Silva Rocha Dias
  */
 public class Resumo {
 
