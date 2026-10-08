@@ -1,5 +1,5 @@
 Coisa
-association Descanso, RegistroTempoOnline, Disciplina,RegistroResumos
+association Descanso, RegistroTempoOnline, Disciplina, RegistroResumos
 ---
 ---
 + main(args:String[]):void
@@ -11,21 +11,22 @@ Descanso
     - numeroSemanas: int
 ---
 
-    + Descanso(horasDescanso:int, horasDescanso:int)
+    + Descanso()
     + defineHorasDescanso(valor: int): void
     + defineNumeroSemanas(valor: int): void
+    - isDescansado(): string
     + getStatusGeral(): string
-
 ---
 
 RegistroTempoOnline
 ---
-
     - nomeDisciplina: string
-    - tempoOnline: int
+    - tempoInvestidoOnline: int
     - tempoEsperado: int
 
 ---
+	+ RegistroTempoOnline(nomeDisciplina: string)
+    + RegistroTempoOnline(nomeDisciplina: string, tempoEsperado: int)
     + adicionaTempoOnline(tempo: int): void
     + atingiuMetaTempoOnline(): void
     + toString(): string
@@ -34,29 +35,51 @@ RegistroTempoOnline
 Disciplina
 ---
 
-    - nome: string
+    - nomeDisciplina: string
     - horasEstudo: int
     - notas: double[]
+    - pesosNotas: int[]
 
 ---
-
-+ cadastraHoras(horas: int): void
+	+ Disciplina(nomeDisciplina: string)
+    + Disciplina(nomeDisciplina: string, quantidadeNotas: int)
+    + Disciplina(nomeDisciplina: string, quantidadeNotas: int, pesos: int[])
+    + cadastraHoras(horas: int): void
     + cadastraNota(nota: int, valorNota: double): void
-+ aprovado(): bool
+    - calculaMedia(): double
+    + aprovado(): bool
     + toString(): string
 ---
 
 RegistroResumos
+composes Resumo
 ---
-    - tema: string
-    - conteudo: string
-
+	- resumos: Resumo[]
+    - numeroDeResumos: int
+    - ultimoResumo: int
 ---
 
     + RegistroResumos(numeroDeResumos: int)
-    + adicionaResumo(tema: string, conteudo: string): void
-    + pegaResumos(): string[]
-    + imprimeResumos(): string
-    + contaResumos(): int
+    + adiciona(tema: string, conteudo: string): void
     + temResumo(tema: string): bool
+    + conta(): int
+    + pegaResumos(): string[]
+    - tiposResumos(): string
+    + busca(chaveDeBusca: string): string[]
+    + imprimeResumos(): string
+
 ---
+
+
+Resumo
+---
+	- tema: string
+    - conteudo: string
+---
+
+	+ Resumo(tema:string, conteudo: string)
+    + getTema(): string
+    + isSimilar(conteudo: string): bool
+    + toString(): string
+---
+

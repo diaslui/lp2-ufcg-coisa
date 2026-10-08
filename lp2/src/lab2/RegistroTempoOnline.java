@@ -53,7 +53,7 @@ public class RegistroTempoOnline {
          *
          * @return {@code true} quando a meta foi atingida
          */
-        boolean atingiuMetaTempoOnline() {
+        public boolean atingiuMetaTempoOnline() {
                 return tempoInvestidoOnline * 2 >= tempoEsperado;
         }
 
