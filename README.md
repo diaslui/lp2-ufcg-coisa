@@ -6,6 +6,11 @@
 
 Esse repositório contém a implementação em JAVA do sistema CoISA para a disciplina de Laboratório de Programação 2 (LP2) do curso de Ciência da Computação da Universidade Federal de Campina Grande (UFCG).
 
+### Diagrama UML 
+<img width="1355" height="249" alt="uml" src="https://github.com/user-attachments/assets/8a73fa4c-e16b-495c-a755-5a829d61135e" />
+
+
+
 ```
 ├── lp2
 │   ├── lp2.iml
@@ -20,7 +25,6 @@ Esse repositório contém a implementação em JAVA do sistema CoISA para a disc
 ├── lp2-ufcg-coisa.iml
 └── README.md
 ```
-
-## Author
+### Author
 
  - Pedro Luis da Silva Rocha Dias: [diaslui.com](https://diaslui.com)
