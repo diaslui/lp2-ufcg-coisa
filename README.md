@@ -23,4 +23,4 @@ Esse repositório contém a implementação em JAVA do sistema CoISA para a disc
 
 ## Author
 
- - Pedro Luis da Silva Rocha Dias: [@diaslui.com](diaslui.com)
+ - Pedro Luis da Silva Rocha Dias: [diaslui.com](https://diaslui.com)
