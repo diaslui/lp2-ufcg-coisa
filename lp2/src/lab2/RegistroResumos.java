@@ -112,6 +112,35 @@ public class RegistroResumos {
     }
 
     /**
+     * Busca por conteúdo
+     *
+     * @return temas onde a palavra buscada faz parte do conteúdo
+     */
+
+    public String[] busca(String chaveDeBusca){
+        int quantidadeSimilar = 0;
+        for (int i=0; i < numeroDeResumos; i++){
+            if (resumos[i].isSimilar(chaveDeBusca)){
+                quantidadeSimilar++;
+            }
+        }
+
+        String[] buscados = new String[quantidadeSimilar];
+        int idx = 0;
+
+        if (quantidadeSimilar > 0){
+        for (int i=0; i < numeroDeResumos; i++){
+            if (resumos[i].isSimilar(chaveDeBusca)){
+                buscados[idx] = resumos[i].getTema();
+                idx++;
+            }
+        }
+        }
+
+        return buscados;
+    }
+
+    /**
      * Retorna um resumo textual do registro.
      *
      * @return quantidade de resumos e seus respectivos temas

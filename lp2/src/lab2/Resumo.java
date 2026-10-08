@@ -34,6 +34,16 @@ public class Resumo {
     }
 
     /**
+     *  Retorna se um texto faz parte do conteudo do resumo.
+     *
+     * @return boolean se faz parte ou nao
+     */
+    public boolean isSimilar(String conteudo){
+        conteudo = conteudo.toLowerCase();
+        return this.conteudo.toLowerCase().contains(conteudo);
+    }
+
+    /**
      * Retorna a representacao textual do resumo.
      *
      * @return tema seguido do conteudo

@@ -18,8 +18,11 @@ public class Disciplina {
     /** Notas das quatro avaliacoes da disciplina. */
     private double[] notas;
 
+    /** Notas das quatro avaliacoes da disciplina. */
+    private int[] pesosNotas;
+
     /**
-     * Constroi uma disciplina sem horas de estudo e sem notas cadastradas.
+     * Constroi uma disciplina sem horas de estudo e sem notas cadastradas (com 4 notas por padrao);.
      *
      * @param nomeDisciplina nome da disciplina
      */
@@ -27,6 +30,38 @@ public class Disciplina {
         this.nomeDisciplina = nomeDisciplina;
         this.horasEstudo = 0;
         notas = new double[4];
+        this.pesosNotas = new int[4];
+        Arrays.fill(this.pesosNotas, 1);
+    }
+
+    /**
+     * Constroi uma disciplina sem horas de estudo e sem notas cadastradas e com quantidade de notas.
+     *
+     *  @param nomeDisciplina nome da disciplina
+     *  @param quantidade de notas da disciplina
+     */
+
+    public Disciplina(String nomeDisciplina, int quantidadeNotas){
+        this.nomeDisciplina = nomeDisciplina;
+        this.horasEstudo = 0;
+        this.notas = new double[quantidadeNotas];
+        this.pesosNotas = new int[quantidadeNotas];
+        Arrays.fill(this.pesosNotas, 1);
+    }
+
+    /**
+     * Constroi uma disciplina sem horas de estudo e sem notas cadastradas, com quantidade de notas e recebendo um array de pesos
+     * com o peso para cada uma das notas em uma média ponderada
+     *
+     *  @param nomeDisciplina nome da disciplina
+     *  @param quantidade de notas da disciplina
+     */
+
+    public Disciplina(String nomeDisciplina, int quantidadeNotas, int[] pesos){
+        this.nomeDisciplina = nomeDisciplina;
+        this.horasEstudo = 0;
+        this.notas = new double[quantidadeNotas];
+        this.pesosNotas = pesos;
     }
 
     /**
@@ -45,7 +80,7 @@ public class Disciplina {
      * @param valorNota valor obtido na avaliacao
      */
     public void cadastraNota(int nota, double valorNota){
-        if (nota < 1 || nota > 4) return;
+        if (nota < 1 || nota > this.notas.length) return;
         this.notas[nota-1] = valorNota;
     }
 
@@ -56,10 +91,10 @@ public class Disciplina {
      */
     private double calculaMedia(){
         double total = 0.0;
-        for (int i=0; i < 4; i++){
-            total += notas[i];
+        for (int i=0; i < this.notas.length; i++){
+            total += (this.pesosNotas[i] * notas[i]);
         }
-        return total/4;
+        return total/this.notas.length;
     }
 
     /**
