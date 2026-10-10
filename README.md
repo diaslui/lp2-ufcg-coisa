@@ -8,8 +8,8 @@ Esse repositório contém a implementação em JAVA do sistema CoISA para a disc
 
 
 ### JavaDoc
-O Javadoc do projeto pode ser acessado online [Clicando Aqui](https://diaslui.com/javadoc/CoISA/).
-ou localmente no diretório `docs` do projeto.
+O Javadoc do projeto pode ser acessado online [Clicando Aqui](https://pages.diaslui.com/lp2-ufcg-coisa/) ou acessando [https://pages.diaslui.com/lp2-ufcg-coisa/](https://pages.diaslui.com/lp2-ufcg-coisa/) .
+Localmente o javadoc pode ser acessado no diretório `docs` do projeto.
 
 
 
