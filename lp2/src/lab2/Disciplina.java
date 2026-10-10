@@ -84,6 +84,14 @@ public class Disciplina {
         this.notas[nota-1] = valorNota;
     }
 
+    private int getSomaPesos() {
+        int soma = 0;
+        for (int i = 0; i < this.pesosNotas.length; i++) {
+            soma += this.pesosNotas[i];
+        }
+        return soma;
+    }
+
     /**
      * Calcula a media aritmetica das quatro notas.
      *
@@ -94,7 +102,7 @@ public class Disciplina {
         for (int i=0; i < this.notas.length; i++){
             total += (this.pesosNotas[i] * notas[i]);
         }
-        return total/this.notas.length;
+        return total/getSomaPesos();
     }
 
     /**

@@ -1,5 +1,7 @@
 package lab2;
 
+import java.util.Arrays;
+
 /**
  * Mantem um conjunto limitado de resumos de estudo.
  * Quando o limite e atingido, novos resumos substituem os mais antigos em
@@ -61,7 +63,7 @@ public class RegistroResumos {
      * @param tema tema procurado
      * @return {@code true} quando o tema esta registrado
      */
-    boolean temResumo(String tema) {
+    public boolean temResumo(String tema) {
         for (int i = 0; i < numeroDeResumos; i++) {
             if (resumos[i].getTema().equals(tema)) {
                 return true;
@@ -136,6 +138,8 @@ public class RegistroResumos {
             }
         }
         }
+
+        Arrays.sort(buscados);
 
         return buscados;
     }

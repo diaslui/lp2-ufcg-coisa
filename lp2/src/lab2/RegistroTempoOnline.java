@@ -44,7 +44,7 @@ public class RegistroTempoOnline {
          *
          * @param tempo quantidade de horas a adicionar
          */
-        void adicionaTempoOnline(int tempo) {
+        public void adicionaTempoOnline(int tempo) {
                 this.tempoInvestidoOnline += tempo;
         }
 
@@ -64,7 +64,7 @@ public class RegistroTempoOnline {
          */
         @Override
         public String toString() {
-                return this.nomeDisciplina + " " + this.tempoInvestidoOnline + " / " + this.tempoEsperado;
+                return this.nomeDisciplina + " " + this.tempoInvestidoOnline + "/" + this.tempoEsperado;
         }
 
 }
