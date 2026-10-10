@@ -36,6 +36,8 @@ public class Resumo {
     /**
      *  Retorna se um texto faz parte do conteudo do resumo.
      *
+     * @param conteudo o texto que deseja comparar com o conteudo do atual resumo
+     *
      * @return boolean se faz parte ou nao
      */
     public boolean isSimilar(String conteudo){

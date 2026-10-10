@@ -38,7 +38,7 @@ public class Disciplina {
      * Constroi uma disciplina sem horas de estudo e sem notas cadastradas e com quantidade de notas.
      *
      *  @param nomeDisciplina nome da disciplina
-     *  @param quantidade de notas da disciplina
+     *  @param quantidadeNotas quantidade de notas da disciplina
      */
 
     public Disciplina(String nomeDisciplina, int quantidadeNotas){
@@ -54,7 +54,8 @@ public class Disciplina {
      * com o peso para cada uma das notas em uma média ponderada
      *
      *  @param nomeDisciplina nome da disciplina
-     *  @param quantidade de notas da disciplina
+     *  @param quantidadeNotas quantidade de notas da disciplina
+     * @param pesos peso da nota de cada disciplina
      */
 
     public Disciplina(String nomeDisciplina, int quantidadeNotas, int[] pesos){
@@ -84,6 +85,11 @@ public class Disciplina {
         this.notas[nota-1] = valorNota;
     }
 
+    /**
+     * Retorna a soma de todos os pesos, util internamente para classe em caso de calcular média ou outras features.
+     *
+     * @return soma dos pesos
+     */
     private int getSomaPesos() {
         int soma = 0;
         for (int i = 0; i < this.pesosNotas.length; i++) {

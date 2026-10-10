@@ -98,7 +98,7 @@ public class RegistroResumos {
     /**
      * Monta a lista dos temas armazenados.
      *
-     * @return temas separados por {@code " | "}
+     * @return todos os temas de resumos separados por "|"
      */
     private StringBuffer tiposResumos() {
         StringBuffer sb = new StringBuffer();
@@ -115,6 +115,8 @@ public class RegistroResumos {
 
     /**
      * Busca por conteúdo
+     *
+     * @param chaveDeBusca O trecho que quer buscar em meio aos conteúdos
      *
      * @return temas onde a palavra buscada faz parte do conteúdo
      */
